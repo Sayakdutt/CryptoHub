@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { CryptoContext } from "../context/CryptoContext.jsx";
 import Pagination from "./Pagination.jsx";
 import { StorageContext } from "../context/StorageContext.jsx";
+import { Link } from "react-router-dom";
 
 const SaveBtn = ({ data }) => {
   const {saveCoin,allCoins,removeCoin} = useContext(StorageContext);
@@ -75,9 +77,17 @@ const Table = () => {
                       alt={data.name}
                       className="w-[1.2rem] h-[1.2rem] mx-1.5"
                     />
-                    <span>{data.symbol}</span>
+                    <span>
+                    <Link to={`/${data.id}`} className="cursor-pointer">
+                      {data.symbol}
+                    </Link>
+                    </span>
                   </td>
-                  <td className="py-4 cursor-pointer sm:table-cell hidden">{data.name}</td>
+                  <td className="py-4 cursor-pointer sm:table-cell hidden">
+                    <Link to={`/${data.id}`} className="cursor-pointer">
+                      {data.name}
+                    </Link>
+                  </td>
                   <td className="py-4">
                     {new Intl.NumberFormat("en-IN", {
                       style: "currency",
