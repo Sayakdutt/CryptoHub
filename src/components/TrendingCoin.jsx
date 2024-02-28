@@ -6,13 +6,13 @@ const TrendingCoin = ({ data }) => {
   let navigate = useNavigate();
 
   const getCoinDetails = (id) => {
-    navigate(`${id}`);
+    navigate(id);
   };
 
   return (
     <div
     className="lg:w-[40%] sm:w-[60%] w-[80%] bg-gray-200 mb-12 last:mb-0 rounded-lg p-4 relative cursor-pointer hover:bg-gray-100 hover:bg-opacity-40"
-      //onClick={() => getCoinDetails(data.id)}
+      onClick={() => getCoinDetails(data.id)}
     >
       {data ? (
         <>
