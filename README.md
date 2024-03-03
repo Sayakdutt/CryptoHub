@@ -29,10 +29,26 @@ CryptoHub is a powerful and user-friendly cryptocurrency screening application b
 
 To run CryptoHub locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Sayakdutt/CryptoHub`
-2. Navigate to the project directory: `cd CryptoHub`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm run dev`
+1. Clone the repository: 
+
+```bash
+    git clone https://github.com/Sayakdutt/CryptoHub
+```
+2. Navigate to the project directory: 
+
+```bash
+    cd CryptoHub
+```
+3. Install dependencies:
+
+```bash
+    npm install
+```
+4. Start the development server:
+ 
+```
+ npm run dev
+```
 
 ## Contributing:
 
